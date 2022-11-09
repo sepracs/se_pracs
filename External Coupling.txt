@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+#include <vector>
+using namespace std;
+
+class Module1
+{
+  public :
+  int x = 12;   // A data variable of Module1 is created
+  string Print()
+  {
+    return "Hello World";
+  }
+};
+
+class Module2 : public Module1
+{    
+  public :
+  void out()
+  {
+    cout << Print() << endl; 
+    cout << x;  
+  }
+};
+
+int main()
+{
+  Module2 obj;
+  obj.out();   
+}

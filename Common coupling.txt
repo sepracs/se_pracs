@@ -1,0 +1,33 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int common;   // Global variable
+
+
+class Module1
+{
+  public :
+  void initialise(int a) 
+  {
+    common = a;
+  }
+};
+
+class Module2
+{    
+  public :
+  void check(int x)
+  {
+    if (common == x)
+      cout << "Equal";
+    else
+      cout << "Not Equal";
+  }
+};
+
+int main()
+{
+  Module2 obj;
+  obj.check(2);   
+}

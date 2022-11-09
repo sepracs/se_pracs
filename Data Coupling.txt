@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Module1
+{
+  public :
+  int x = 12;   // A data variable of Module1 is created
+};
+
+class Module2
+{
+  Module1 m1;    // A Module1 object is created to access variable 'x'
+  public :
+  void out()
+  {
+    cout << m1.x;   
+  }
+};
+
+int main()
+{
+  Module2 obj;
+  obj.out();   // Result : 12
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Module1
+{
+  private :
+  int x = 10;
+  friend class Module2;
+};
+
+class Module2
+{    
+  public :
+  void change(int a)
+  {
+    Module1 m1;
+    cout << "Initial value : " << m1.x << endl; 
+    m1.x = a;
+    cout << "Changed Value : " << m1.x;
+  }
+};
+
+int main()
+{
+  Module2 obj;
+  obj.change(2);   
+}

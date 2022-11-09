@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+typedef struct    // A structure Point is defined
+{
+  int x;
+  int y;
+} Point;
+
+
+class Module1
+{
+  public :
+  Point pt;     // Module1 takes care of declaring a Point instance
+  void init(int a, int b) 
+  {
+    pt.x = a;
+    pt.y = b;
+  }
+};
+
+class Module2
+{
+  public :
+  void out(int a, int b)
+  {
+    Module1 m1;
+    m1.init(a,b);
+    cout << "The given point is : " << '(' << m1.pt.x << "," << m1.pt.y << ')';
+  }
+
+  // The Point instance from Module1 is printed out from Module2
+};
+
+
+int main()
+{
+  Module2 obj;
+  obj.out(2,3);
+}

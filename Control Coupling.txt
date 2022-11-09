@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Module1
+{
+  public :
+  int x = 40;   // A data variable of Module1 is created
+};
+
+class Module2
+{ 
+  public :
+  void out()
+  {
+    Module1 m1;
+    switch (m1.x)
+    {
+      case 10:
+        cout << "It is 10!";
+        break;
+
+      case 20:
+        cout << "It is 20!";
+        break;
+
+      case 30:
+        cout << "It is 30!";
+        break;
+
+      default:
+        cout << "No Match, Try again";
+    }
+  }
+};
+
+int main()
+{
+  Module2 obj;
+  obj.out();   
+}

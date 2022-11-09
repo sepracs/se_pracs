@@ -1,0 +1,17 @@
+class Cosine {
+  int angle;
+  public Cosine(int degree) {
+    this.angle = degree;
+  }
+  public void findCosine() {
+    double rad = (Math.PI / 180) * this.angle;
+    System.out.println("The Cosine of given angle is : " + Math.cos(rad));
+  }
+}
+
+public class Functional {
+  public static void main(String[] args) {
+    Cosine obj = new Cosine(30);
+    obj.findCosine();
+  }
+}

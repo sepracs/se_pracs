@@ -1,0 +1,44 @@
+import java.util.ArrayList;
+
+class Stack {
+  ArrayList<Integer> stack = new ArrayList<>();
+  int tos = -1;
+  public void push(int x) {
+    this.stack.add(x);
+    this.tos++;
+  }
+  public void pop() {
+    if (this.tos == -1)
+      System.out.println("Stack empty");
+    else {
+      stack.remove(this.stack.size()-1);
+      this.tos--;
+    }
+      
+  }
+  public void peek() {
+    System.out.println("Current Top of Stack : " + this.stack.get(this.tos));
+  }
+  public void display() {
+    for (int i = this.stack.size()-1; i >= 0; i--)
+      System.out.println(this.stack.get(i));
+  }
+}
+
+
+public class Communicational {
+  public static void main(String[] args) {
+    Stack obj = new Stack();
+    obj.push(1);
+    obj.push(2);
+    obj.push(3);
+    obj.push(4);
+    obj.peek();
+    obj.display();
+  }
+}
+
+
+
+
+
